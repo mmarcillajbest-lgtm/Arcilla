@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My personal student portfolio website">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+x
+  <header class="header">
+    <a href="#home" class="logo">MyPortfolio<span>.</span></a>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-buttons">
+      <button class="theme-btn" id="themeBtn">🌙 Dark Mode</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+x
+    <section id="home" class="hero">
+      <div class="slideshow">
+        <div class="slide slide-one active"></div>
+        <div class="slide slide-two"></div>
+        <div class="slide slide-three"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+        <h1>Hello, I'm <span>Your Name</span></h1>
+        <h2>Student | Beginner Web Developer</h2>
+        <p>
+          Welcome to my personal portfolio! This website showcases
+          my background, skills, interests, and school projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="slide-controls">
+          <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <h2>About <span>Me</span></h2>
+      </div>
+
+      <div class="about-container">
+        <div class="profile-photo">
+          <img
+            src="arcilla.jpg "
+            alt="My profile photo"
+            onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='grid';"
+          >
+          <div class="photo-placeholder" id="photoPlaceholder">
+            YOUR PHOTO
+          </div>
+        </div>
+
+        <div class="card about-card">
+          <h3>Personal Information</h3>
+          <p><strong>Name:</strong> Mark Marlo Arcilla</p>
+          <p><strong>Education:</strong> Bachelor of Science in Information Technology</p>
+          <p><strong>Interests:</strong> Music, Technology, Art</p>
+          <p><strong>Location:</strong> Philippines</p>
+
+          <button class="btn" id="readBtn">Read More</button>
+
+          <div id="moreInfo" hidden>
+            <p>
+              I am a student who enjoys learning new skills,
+              exploring technology, and creating websites.
+              My goal is to improve my programming knowledge
+              and develop useful projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alternate-section">
+      <div class="section-heading">
+        <h2>My <span>Skills</span></h2>
+      </div>
+
+      <div class="grid">
+        <article class="card skill-card">
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>HTML</h3>
+          <p>Creating the structure of web pages.</p>
+          <div class="progress"><span style="width: 80%"></span></div>
+        </article>
+
+        <article class="card skill-card">
+          <div class="skill-icon">✦</div>
+          <h3>CSS</h3>
+          <p>Designing layouts, colors, and responsive pages.</p>
+          <div class="progress"><span style="width: 65%"></span></div>
+        </article>
+
+        <article class="card skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>JavaScript</h3>
+          <p>Adding interactivity and dynamic content to websites.</p>
+          <div class="progress"><span style="width: 50%"></span></div>
+
+        
+    </section>
+x
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">MY SCHOOL ACTIVITIES</p>
+        <h2>My <span>Projects</span></h2>
+      </div>
+
+      
+        <article class="card project-card">
+          <div class="project-image project-two">PROJECT 02</div>
+          <div class="project-content">
+            <p class="project-label">MIDTERM</p>
+            <h3>Midterm Activity</h3>
+            <p>My activities and projects from the midterm period.</p>
+            <a href="cssdesign.html" class="project-link">View Project ↗</a>
+          </div>
+        </article>
+
+        
+    </section>
+
+    <section id="contact" class="section alternate-section">
+      <div class="section-heading">
+        <h2>Contact <span>Me</span></h2>
+      </div>
+
+      <div class="card contact-card">
+        <p>
+          Thank you for visiting my portfolio!
+          You can contact me using the information below.
+        </p>
+        <p><strong>Email:</strong>mmarcilla.jbest@gmail.com</p>
+        <p><strong>Phone:</strong> 0994-496-1677</p>
+
+        <button class="btn" id="contactBtn">Say Hello</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; <span id="year"></span> Mark Marlo Arcilla.
+      All rights reserved.
+    </p>
+    <a href="#home">Back to Home ↑</a>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

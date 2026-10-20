@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            font-family: italic
+            box-sizing  border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .Title {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            margin: 50px 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;             
+            justify-content: center;  
+            align-items: center;       
+            gap: 10px;                 
+            min-height: 200px;
+            width: 100%;
+        }
+
+        .A, .B, .C, .D, .E, .F {
+            width: 200px;
+            height: 250px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .A, .B, .C {
+            background-color: rgb(27, 204, 133);
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        .A:hover {
+            transform: translateX(-30px);
+            background-color: silver;
+        }
+
+        .B:hover {
+            transform: scale(1.15);
+            background-color: silver;
+        }
+
+        .C:hover {
+            transform: translateX(30px);
+            background-color: silver;
+        }
+
+        .D, .E, .F {
+            background-color: rgb(18, 37, 210);
+        }
+
+        .D {
+            animation: moveLeft 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveLeft {
+            from { transform: translateX(0); }
+            to { transform: translateX(-30px); background-color: silver; }
+        }
+
+        .E {
+            animation: scaleUp 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(1); }
+            to { transform: scale(1.5); background-color: silver; }
+        }
+
+        .F {
+            animation: moveRight 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveRight {
+            from { transform: translateX(0); }
+            to { transform: translateX(30px); background-color: silver; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-title">ANIMATIONS VIA HOVER</div>
+    <div class="row">
+        <div class="A">left</div>
+        <div class="B">center</div>
+        <div class="C">right</div>
+    </div>
+
+    <div class="section-title">AUTOMATIC ANIMATIONS</div>
+    <div class="row">
+        <div class="D">left</div>
+        <div class="E">center</div>
+        <div class="F">right</div>
+    </div>
+
+</body>
+</html>
